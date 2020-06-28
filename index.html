@@ -392,7 +392,7 @@
                     <div class="g-recaptcha" data-sitekey="6LdAfKoZAAAAAJxIHZ9Co79O3EzfHd-K8Yhq43E7"></div>
                     <div class="text-center">
                         <div id="success"></div>
-                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" onclick="ga('send','event','button','click','submit',10)" type="submit">Send Message</button>
                     </div>
                 </form>
             </div>
@@ -614,6 +614,15 @@
             function onSubmit(token) {
               document.getElementById("demo-form").submit();
             }
-          </script>
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171096767-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-171096767-1');
+        </script>
     </body>
 </html>
